@@ -53,9 +53,23 @@ git clone <this-repo> <你的项目>/.workbuddy/skills/spring-cloud-alibaba-guar
 
 或直接下载仓库，把整个文件夹放进上述任一目录。
 
-> 路径中的 `~/.workbuddy/skills/` 是 WorkBuddy 的用户级 Skill 目录；其他兼容 Agent Skills 的工具请放入其对应的 skills 目录。
-
 安装后无需额外配置，描述匹配到相关任务时会自动加载。
+
+### 在其他 AI 编码工具中使用
+
+`SKILL.md` 遵循 [Agent Skills 开放标准](https://agentskills.io)，**同一份文件可直接用于多个工具**，只需放入对应目录：
+
+| 工具 | 安装目录 | 层级 |
+|---|---|---|
+| Claude Code | `~/.claude/skills/` | 用户级 |
+| OpenAI Codex CLI | `~/.codex/skills/` | 用户级 |
+| Gemini CLI | `~/.gemini/skills/` | 用户级 |
+| OpenClaw | `~/.openclaw/skills/` | 用户级 |
+| WorkBuddy | `~/.workbuddy/skills/` | 用户级 |
+| Cursor | `.cursor/skills/` | 项目级 |
+| GitHub Copilot | `.github/skills/` | 项目级 |
+
+> 本 Skill 仅使用 `name`、`description` 与 Markdown 正文，未依赖任何平台专有特性，因此可跨平台直接复用。`agent_created` 字段为 WorkBuddy 专属，其他工具会安全忽略。
 
 ---
 

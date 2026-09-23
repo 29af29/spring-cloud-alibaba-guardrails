@@ -1,9 +1,11 @@
 ---
 name: spring-cloud-alibaba-guardrails
 description: 面向 Spring Boot 3 + Spring Cloud Alibaba 项目的 Java 后端开发护栏，约束 AI 按企业级规范编写或修改 Controller、Service、ServiceImpl、Mapper、DTO、VO、PO，设计统一响应体与全局异常、参数校验、JWT 鉴权与身份透传，以及涉及 Redis、RabbitMQ、Seata、Sentinel、Redisson 的代码；也可在用户要求「检查这个接口」「review 一下」「有没有问题」时，对已写代码按五维度输出分级问题清单。Trigger: Spring Cloud Alibaba, Spring Boot 3, 微服务, 开发规范, code review, 接口审查, 分层规范, 统一响应, 分布式事务, 幂等, 超卖。
-agent_created: true
-version: 1.0.0
 license: MIT
+metadata:
+  author: "29af29"
+  version: "1.0.0"
+agent_created: true
 ---
 
 # Spring Cloud Alibaba 开发护栏
