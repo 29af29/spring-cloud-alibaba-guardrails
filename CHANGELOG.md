@@ -2,6 +2,14 @@
 
 本项目遵循 [语义化版本](https://semver.org/lang/zh-CN/)，格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
 
+## [Unreleased]
+
+### 新增
+
+- `references/pitfalls.md` 补充第 13 条：把「缓存降级」当成「幂等兜底」
+  - 来源：实战中发现有实现以 `order_no` 唯一索引作为 Redis 降级后的幂等兜底，但 `order_no` 为每次请求新生成的雪花 ID，重复请求产生不同值，唯一索引永远不会冲突
+  - 要点：技术主键的唯一性 ≠ 业务幂等；兜底必须建立在业务唯一键（`requestId`、业务组合键）上
+
 ## [1.0.0] - 2026-09-23
 
 ### 新增
